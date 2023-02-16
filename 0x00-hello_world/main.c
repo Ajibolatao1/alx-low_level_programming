@@ -11,5 +11,5 @@
 int main(void)
 {
 	printf("This is the main fiunction");
-	result (0);
+	return (0);
 }
