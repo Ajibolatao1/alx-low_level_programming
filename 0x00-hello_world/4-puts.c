@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(void)
 {
 	/*This uses the puts funtion to print out the content*/
