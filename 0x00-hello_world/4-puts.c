@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * Puts - to print a string
+ * puts - to print a string
  *
- * Return Always 0
+ * Return: This comes last
  */
 
 int main(void)
