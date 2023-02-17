@@ -7,14 +7,14 @@
  *
  * putchar - to print the letters
  *
- * Result: the exit point
+ * Return: the exit point
  */
 
 int main(void)
 {
 	char i;
 
-	for (i = 'z'; i <= 'a'; i--)
+	for (i = 'z'; i >= 'a'; i--)
 		putchar(i);
 	putchar('\n');
 	return (0);
