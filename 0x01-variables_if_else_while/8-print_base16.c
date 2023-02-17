@@ -7,7 +7,7 @@
  * Return: the exit point
  */
 
-int main (void)
+int main(void)
 {
 	int i;
 
@@ -15,9 +15,9 @@ int main (void)
 	{
 		if (i < 10)
 			putchar(i + '0');
-		else 
+		else
 			putchar(i - 10 + 'a');
-	
+
 	}
 	putchar('\n');
 	return (0);
