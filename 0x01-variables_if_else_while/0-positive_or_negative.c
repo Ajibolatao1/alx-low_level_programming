@@ -24,6 +24,6 @@ int main(void)
 		printf("%d id zero", n);
 	else
 		printf("%d id negative", n);
-
+	printf("\n");
 	return (0);
 }i

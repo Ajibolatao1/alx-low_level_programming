@@ -19,6 +19,7 @@ int main(void)
 		printf("Last digit of %d id %d and is 0", n, l_numb);
 	if (l_numb < 6)
 		printf("Last digit of %d id %d and is less than 6", n, l_numb);
+	printf("\n");
 
 
 	return (0);
