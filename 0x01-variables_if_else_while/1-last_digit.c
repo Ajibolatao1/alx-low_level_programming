@@ -13,7 +13,7 @@
  *
  * printf - print the output
  *
- * Result: value to output
+ * Return: value to output
  */
 
 int main(void)
