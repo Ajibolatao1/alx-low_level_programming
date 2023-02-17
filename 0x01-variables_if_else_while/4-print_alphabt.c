@@ -7,9 +7,9 @@
  *
  * if - to set the conditiosn to remove q and e
  *
- * putchar - to print letters 
+ * putchar - to print letters
  *
- * return: the return value
+ * Return: the return value
  */
 
 int main(void)
