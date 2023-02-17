@@ -17,7 +17,7 @@ int main(void)
 		{
 			first1 = i / 10;
 			second1 = i % 10;
-			first2 = j / 100;
+			first2 = j / 10;
 			second2 = j % 10;
 
 			putchar('0' + first1);
