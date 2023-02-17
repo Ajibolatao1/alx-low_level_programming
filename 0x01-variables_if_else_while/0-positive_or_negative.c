@@ -8,7 +8,7 @@
  *
  * printf - to print the whether it is positive
  *
- * return: the result
+ * Return: the result
  */
 
 int main(void)
