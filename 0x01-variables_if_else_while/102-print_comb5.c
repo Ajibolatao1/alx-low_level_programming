@@ -11,9 +11,9 @@ int main(void)
 {
 	int i, j, first1, second1, first2, second2;
 
-	for (i = 0; i < 99; i++)
+	for (i = 0; i <= 98; i++)
 	{
-		for (j = i + 1; j < 100; j++)
+		for (j = i + 1; j <= 99; j++)
 		{
 			first1 = i / 10;
 			second1 = i % 10;
@@ -26,11 +26,12 @@ int main(void)
 			putchar('0' + first2);
 			putchar('0' + second2);
 
-			if (i < 99)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			if (i == 98 && j == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
+
 
 		}
 
