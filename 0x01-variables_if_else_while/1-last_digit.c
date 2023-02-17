@@ -1,8 +1,20 @@
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
+#include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - the entry ppoint
+ *
+ * srand - 
+ *
+ * rand - random
+ *
+ * if - conditional statement to check the value of the number
+ *
+ * printf - print the output
+ * Result: value to output
+ */
+
 int main(void)
 {
 	int n;
@@ -14,11 +26,11 @@ int main(void)
 	int l_numb = n % 10;
 
 	if (l_numb > 5)
-		printf("Last digit of %d id %d and is greater than 5", n, l_numb);
+		printf("Last digit of %d is %d and is greater than 5", n, l_numb);
 	if (l_numb == 0)
-		printf("Last digit of %d id %d and is 0", n, l_numb);
+		printf("Last digit of %d is %d and is 0", n, l_numb);
 	if (l_numb < 6)
-		printf("Last digit of %d id %d and is less than 6", n, l_numb);
+		printf("Last digit of %d is %d and is less than 6", n, l_numb);
 	printf("\n");
 
 
