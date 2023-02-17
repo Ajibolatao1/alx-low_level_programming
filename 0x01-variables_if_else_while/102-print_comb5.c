@@ -11,13 +11,13 @@ int main(void)
 {
 	int i, j, first1, second1, first2, second2;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 99; i++)
 	{
 		for (j = i + 1; j < 100; j++)
 		{
 			first1 = i / 10;
 			second1 = i % 10;
-			first2 = j /100;
+			first2 = j / 100;
 			second2 = j % 10;
 
 			putchar('0' + first1);
