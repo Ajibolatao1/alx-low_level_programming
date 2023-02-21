@@ -3,7 +3,7 @@
 /**
  * _isalpha - check if the inputted value is a character
  *
- * c - the inputted character
+ * c: the inputted character
  *
  * Return: The returned value
  */
