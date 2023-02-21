@@ -13,22 +13,22 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		putchar('+');
-		putchar(',');
+		putchar(43);
+		putchar(44);
 		putchar(' ');
 		return (1);
 	}
 	else if (n == 0)
         {
-		putchar('0');
-		putchar(',');
+		putchar(48);
+		putchar(44);
                 putchar(' ');
 		return (0);
         }
 	else if (n < 0)
 	{
-		putchar('-');
-		putchar(',');
+		putchar(45);
+		putchar(44);
                 putchar(' ');
 		return (-1);
 	}
