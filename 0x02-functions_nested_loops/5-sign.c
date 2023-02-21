@@ -1,18 +1,13 @@
 #include <main.h>
 
-/** main - function that prints the sign of a number.
+/** 
+ * print_sign - function that prints the sign of a number.
+ *
+ * @n: the inputted value
  *
  * Return: the returned value
  */
 
-int print_sign(int n);
-
-int main(void)
-{
-	print_sign();
-	
-	return (0);
-}
 
 int print_sign(int n) 
 {
