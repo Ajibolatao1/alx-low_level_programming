@@ -1,5 +1,5 @@
 #include "main.h"
-/** main - the entry point
+/** print_alphabet - print all alphabets from a to z
  *
  * Return: the returned value
  */
@@ -12,5 +12,6 @@ void print_alphabet(void)
 	{
 		_putchar(i);
 	}
+
 	_putchar('\n');
 }
