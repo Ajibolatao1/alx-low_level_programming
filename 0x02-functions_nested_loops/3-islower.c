@@ -3,7 +3,7 @@
 /**
  * _islower - check if a character is lower case
  *
- * c - the inputted value
+ * @c: the inputted value
  *
  * if - conditional statement
  *
