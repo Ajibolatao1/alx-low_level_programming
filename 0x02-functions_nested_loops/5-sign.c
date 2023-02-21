@@ -13,23 +13,23 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		putchar(43);
-		putchar(44);
-		putchar(' ');
+		_putchar(43);
+		_putchar(44);
+		_putchar(' ');
 		return (1);
 	}
 	else if (n == 0)
         {
-		putchar(48);
-		putchar(44);
-                putchar(' ');
+		_putchar(48);
+		_putchar(44);
+                _putchar(' ');
 		return (0);
         }
 	else if (n < 0)
 	{
-		putchar(45);
-		putchar(44);
-                putchar(' ');
+		_putchar(45);
+		_putchar(44);
+                _putchar(' ');
 		return (-1);
 	}
 
