@@ -3,6 +3,7 @@
 /**
  * _islower - check if a character is lower case
  *
+ * c - the inputted value
  *
  * Return: the returned value
  */
