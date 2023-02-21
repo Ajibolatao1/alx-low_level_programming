@@ -7,10 +7,9 @@ void print_alphabet(void)
 	i = 97;
 	while (i < 123)
 	{
-		putchar(i);
+		_putchar(i);
 		i++;
 	}
-	putchar("\n");
 
 }
 
@@ -26,10 +25,9 @@ void print_alphabet_x10()
 	{
 		while (i < 123)
 		{
-			putchar(i);
+			_putchar(i);
 			i++;
 		}
-		putchar("\n");
 		i = 97;
 		j++;
 	}
