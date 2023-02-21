@@ -3,14 +3,14 @@
 /**
  * print_last_digit - function to print the last digit of a number
  *
- * @r: the given varuable
+ * @i: the given varuable
  *
  * Return: The returned value
  */
 
 int print_last_digit(int i)
 {
-	int i, n;
+	int n;
 
 	n = i % 10;
 
