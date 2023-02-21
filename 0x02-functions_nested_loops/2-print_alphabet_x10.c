@@ -1,10 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 
-/** main - the entry point
+/**
+ * print_alphabet_x10 - print alphabets 10 times
  *
  *
- * Return: The returned value
+ * Return: The return value
  */
 
 void print_alphabet_x10(void);
