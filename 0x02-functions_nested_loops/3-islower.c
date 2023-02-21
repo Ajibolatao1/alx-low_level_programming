@@ -5,6 +5,10 @@
  *
  * c - the inputted value
  *
+ * if - conditional statement
+ *
+ * else - - to return 0
+ *
  * Return: the returned value
  */
 
