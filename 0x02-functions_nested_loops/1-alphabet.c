@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /** main - the entry point
  *
@@ -14,16 +14,3 @@ int main(void)
 
 }
 
-void print_alphabet(void) 
-{
-	int i;
-
-	i = 97;
-	while (i < 123)
-	{
-		putchar(i);
-		i++;
-	}
-	putchar("\n");
-
-}
