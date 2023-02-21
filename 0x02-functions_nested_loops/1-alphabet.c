@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * print_alphabet - print all alphabets from a to z
  *
  * Return: the returned value
