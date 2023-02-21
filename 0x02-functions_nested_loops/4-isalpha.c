@@ -1,19 +1,10 @@
 #include <main.h>
 
-/** main - check for alphabetic chracter
- *
+/** 
+ * _isalpha - check if the inputted value is a character
  *
  * Return: The returned value
  */
-
-int _isalpha(int c);
-
-int main(void)
-{
-	_isalpa();
-	return (0);
-
-}
 
 int _isalpha(int c)
 {
