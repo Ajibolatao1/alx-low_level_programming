@@ -6,7 +6,7 @@
  * Return: the retrurned value
  */
 
-void taimes_table(void)
+void times_table(void)
 {
 	int a, b, op;
 
