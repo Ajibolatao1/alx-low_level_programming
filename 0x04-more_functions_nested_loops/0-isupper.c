@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _isupper - checks for uppercase character
  *
  * @c: the passed in arguement
  *
- * Result: the returned result
+ * Return: the returned result
  */
 
 int _isupper(int c)
