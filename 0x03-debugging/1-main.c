@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
-* main - causes an infinite loop
-* Return: 0
-*/
+ * main - causes an infinite loop
+ * Return: 0
+ */
 
 int main(void)
 {
 	int i;
 
-	printf("Infinite loop incoming :(\n");
+	printf("infinite loop incoming :(\n");
 
 	i = 0;
 
@@ -18,7 +18,7 @@ int main(void)
 	/*	putchar(i);*/
 	/*}*/
 
-	printf("Infinite loop avoided! \\o/\n");
+	printf("infinite loop avoided! \\o/\n");
 
 	return (0);
 }
