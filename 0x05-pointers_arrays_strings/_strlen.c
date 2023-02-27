@@ -8,12 +8,12 @@
  * Return: the returned value
  */
 
-int _strlen(const char *str)
+int _strlen(char *s)
 {
-	const char *p;
+	char *p;
 	int len;
 
-	*p = str;
+	*p = s;
 	len = 0;
 
 	while (*p != '\0')
