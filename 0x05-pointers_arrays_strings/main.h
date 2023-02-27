@@ -6,7 +6,7 @@ void swap_int(int *a, int *b);
 
 size_t strlen(const char *str);
 
-int _strlen(char *s);
+int _strlen(const char *str);
 
 void _puts(char *str);
 

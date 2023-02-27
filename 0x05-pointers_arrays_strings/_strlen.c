@@ -1,21 +1,28 @@
 #include <stddef.h>
 
 /**
- * strlen - the string length value
+ * _strlen - the string length value
  *
  * @str: the passed string
  *
  * Return: the returned value
  */
 
-size_t strlen(const char *str)
+int _strlen(const char *str)
 {
-	const char *p = str;
+	const char *p;
+	int len;
+
+	*p = str;
+	len = 0;
 
 	while (*p != '\0')
 	{
+		len++;
 		p++;
 	}
 
-	return (p - str);
+	return (len);
+
+
 }
