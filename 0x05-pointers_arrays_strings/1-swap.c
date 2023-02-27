@@ -6,8 +6,6 @@
  * @a: first pointer
  *
  * @b: second pointer
- *
- * Return: the returned value
  */
 
 void swap_int(int *a, int *b)
