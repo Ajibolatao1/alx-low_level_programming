@@ -16,7 +16,7 @@ char *leet(char *str)
 
 	len = strlen(str);
 
-	leet_table = "4433771100";
+	leet_table = "443300771100";
 
 	for (i = 0; i < len; i++)
 	{
