@@ -1,39 +1,33 @@
 #include "main.h"
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include <stdio.h>
 
 /**
- * rot13 - check the code for
- * @str: the passed in arguement
- * Return: Always 0.
- */
-
-char *rot13(char *str)
+  * rot13 - ...
+  * @s: ...
+  *
+  * Return: ...
+  */
+char *rot13(char *s)
 {
+	int a = 0;
 
-	int i, j, shift;
-
-	char c, *result;
-
-	result = (char *) malloc(strlen(str) + 1);
-
-	for (i = 0, j = 0; str[i] != '\0'; i++, j++)
+	while (s[a])
 	{
-		c = str[i];
-
-		if (isalpha(c))
+		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 		{
-			shift = islower(c) ? 'a' : 'A';
-			c = ((c - shift) + 13) % 26 + shift;
+			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			{
+				s[a] -= 13;
+				break;
+			}
 
+			s[a] += 13;
+			break;
 		}
-		result[j] = c;
 
+		a++;
 	}
-	result[j] = '\0';
-	return (result);
 
-
+	return (s);
 }
+
