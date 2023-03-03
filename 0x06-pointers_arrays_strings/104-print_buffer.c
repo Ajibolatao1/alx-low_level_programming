@@ -1,51 +1,85 @@
 #include <stdio.h>
-#include <ctype.h>
-
+#include <stdlib.h>
+void print_hex_line(char *buffer, int numBitsInLine, int currentPosition);
+void print_buffer_line(char *b, int n, int cur);
 /**
- * print_buffer - the print buffer function
- * @b: the string argument
+ * print_buffer - prints contents of a buffer
  *
- * @size: the int variable
+ * @b: buffer to print
+ * @size: size of buffer
  *
+ * Return: always void
  */
-
 void print_buffer(char *b, int size)
 {
-	int i, j;
-	char c;
+	int quo, rem, i = 0;
+	int bitCounter = 0, numBitsInLine;
 
-	if (size <= 0)
-	{
-		printf("\n");
+	if (size == 0)
 		return;
-	}
-
-
-	for (i = 0; i < size; i += 10)
+	quo = size / 10;
+	rem = size % 10;
+	if (rem)
+		quo++;
+	while (i < quo) /* loop through 10 bits at a time */
 	{
-		printf("%08x ", i);
-		for (j = 0; j < 10; j++)
+		numBitsInLine = (size - rem) > bitCounter ? 10 : rem;
+		printf("%.8x: ", bitCounter);
+		print_hex_line(b, numBitsInLine, bitCounter);
+		print_buffer_line(b, numBitsInLine, bitCounter);
+		putchar('\n');
+		bitCounter += 10;
+		i++;
+	}
+}
+/**
+ * print_hex_line - prints chars of buffer as hex in sets of 2
+ *
+ * @b: buffer to print line from
+ * @numBitsInLine: number of bits in line, print spaces to fill in
+ * @currentPos: position in array of starting point of line
+ *
+ * Return: always void
+ */
+void print_hex_line(char *b, int numBitsInLine, int currentPos)
+{
+	int nestedCounter = 0;
+
+	while (nestedCounter < 10)
+	{
+		if (nestedCounter >= numBitsInLine)
+			printf("  ");
+		else
+			printf("%.2x", b[currentPos + nestedCounter]);
+		if (nestedCounter % 2)
+			putchar(' ');
+		nestedCounter++;
+	}
+}
+/**
+ * print_buffer_line - prints chars of buffer as buffchar in sets of 2
+ *
+ * @b: buffer to print line from
+ * @numBitsInLine: number of bits in line, print spaces to fill in
+ * @currentPos: position in array of starting point of line
+ *
+ * Return: always void
+ */
+void print_buffer_line(char *b, int numBitsInLine, int currentPos)
+{
+	int nestedCounter = 0;
+
+	while (nestedCounter < 10)
+	{
+		if (nestedCounter >= numBitsInLine)
+			break;
+		else if (b[currentPos + nestedCounter] >= 32
+			&& b[currentPos + nestedCounter] < 127)
 		{
-			if (i + j < size)
-				printf("%02x ", b[i + j]);
-
-			else
-				printf("   ");
+			printf("%c", b[currentPos + nestedCounter]);
 		}
-		printf(" ");
-
-		for (j = 0; j < 10; j++)
-		{
-			if (i + j < size)
-			{
-				c = b[i + j];
-				if (isprint(c))
-					printf("%c", c);
-
-				else
-					printf(".");
-			}
-		}
-		printf("\n");
+		else
+			printf(".");
+		nestedCounter++;
 	}
 }
