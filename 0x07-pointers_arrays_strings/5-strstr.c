@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * _strstr: a function that locates a substring
+ * _strstr - a function that locates a substring
  *
  * @haystack: the first arguement
  *
@@ -14,7 +14,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	char *p1, *p2, *p3;
-	
+
 	if (*needle == '\0')
 		return (haystack);
 
@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			p2 = needle;
 			p3 = p1;
-		
+
 
 			while (*p2 != '\0' && *p3 == *p2)
 			{
