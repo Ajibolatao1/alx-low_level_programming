@@ -1,11 +1,8 @@
 #include "main.h"
 
-/*
- * factorial - the factorial
- * factorial: the factorial
- * factorial - the factorial function
- * factorial of a mumber
- * @n: the passed in integer
+/**
+ * factorial - function that returns the factorial of a given number.
+ * @n: the given integer
  * Return: the returned value
  */
 
@@ -17,6 +14,5 @@ int factorial(int n)
 		return (1);
 	if (n < 1)
 		return (-1);
-
-
 }
+
