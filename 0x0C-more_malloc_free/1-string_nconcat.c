@@ -1,53 +1,33 @@
-#include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
- * string_nconcat - concatenates two strings
- * @s1: string 1 to concatenate
- * @s2: string 2 to concatenate
- * @n: int to count
- *
- * Return: new space in memory
+ * string_nconcat - concatenate two strings up to n bytes.
+ * @s1: source string
+ * @s2: string to truncate up to n bytes
+ * @n: number of bytes to truncate by
+ * Return: pointer to new buffer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int h = 0, y = 0, k = 0, i = 0;
-	char *str;
+	char *p;
+	unsigned int s1count, s2count, sizeBuffer, i;
 
 	if (s1 == NULL)
-		s1 = " ";
+		s1 = "";
 	if (s2 == NULL)
-		s2 = " ";
-	while (s1[h])
-	{
-		h++;
-	}
-	while (s2[y])
-	{
-		y++;
-	}
-	if (n >= y)
-		k = h + y;
-	else
-		k = h + n;
-	str = malloc(k * sizeof(char) + 1);
-	if (str == NULL)
+		s2 = "";
+	for (s1count = 0; s1[s1count]; s1count++)
+		;
+	for (s2count = 0; s2[s2count]; s2count++)
+		;
+	s2count > n ? (s2count = n) : (n = s2count);
+	sizeBuffer = s1count + s2count + 1;
+	p = malloc(sizeBuffer * sizeof(char));
+	if (p == NULL)
 		return (NULL);
-	y = 0;
-	while (i < k)
-	{
-		if (i <= h)
-		{
-			str[i] = s1[i];
-		}
-		if (i >= h)
-		{
-			str[i] = s2[y];
-			y++;
-		}
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	for (i = 0; i < sizeBuffer - 1; i++)
+		i < s1count ? (p[i] = s1[i]) : (p[i] = s2[i - s1count]);
+	p[sizeBuffer] = '\0';
+	return (p);
 }
