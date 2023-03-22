@@ -1,8 +1,8 @@
 #include <stddef.h>
 #include <stdio.h>
 
-#ifndef _FUNCTION_POINTERS_H_
-#define _FUNCTION_POINTERS_H_
+#ifndef function_pointers.h
+#define function_pointers.h
 
 int _putchar(char c);
 
